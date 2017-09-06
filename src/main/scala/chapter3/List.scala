@@ -1,5 +1,7 @@
 package chapter3
 
+import scala.annotation.tailrec
+
 /**
   * Created by Tomasz Kopczynski.
   */

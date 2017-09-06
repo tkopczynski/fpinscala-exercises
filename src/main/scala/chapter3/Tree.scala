@@ -31,8 +31,8 @@ object Tree {
 
   def fold[A, B](t: Tree[A])(init: Leaf[A] => B)(f: Branch[A] => B): B = {
     t match {
-      case Leaf(_) => init(t)
-      case Branch(_,_) => f(t)
+      case Leaf(v) => init(Leaf(v))
+      case Branch(l,r) => f(Branch(l,r))
     }
   }
 

@@ -45,19 +45,7 @@ class Chapter4 {
   }
 
   def traverse[A,B](a: List[A])(f: A => Option[B]): Option[List[B]] = {
-    def t[A](l: List[A], acc: List[B]): Option[List[B]] = {
-      l match {
-        case Nil => Some(acc)
-        case Cons(head, tail) => {
-          f(head) match {
-            case None => None
-            case Some(v) => t(tail, Cons(v, acc))
-          }
-        }
-      }
-    }
-
-    t(a, List())
+    List.foldRight[A, Option[List[B]]](a, Some(Nil))((a1, a2) => map2(f(a1), a2)((a, b) => List.append(b, a)))
   }
 
   def sequence_with_traverse[A](a: List[Option[A]]): Option[List[A]] = {

@@ -41,8 +41,8 @@ object Chapter3 {
 
   def maximumFold(t: Tree[Int]): Int = Tree.fold(t)(l => l.value)(b => maximumFold(b.left).max(maximumFold(b.right)))
 
-  def main(args: Array[String]): Unit = {
-    println(Tree.map(Branch(Leaf(1), Leaf(2)))(_ + 1))
+//  def main(args: Array[String]): Unit = {
+//    println(Tree.map(Branch(Leaf(1), Leaf(2)))(_ + 1))
 //    println(Tree.depth(Branch(Leaf(1), Leaf(2))))
 //    println(maximum(Branch(Leaf(1), Leaf(2))))
 //    println(Tree.size(Branch(Leaf(1), Leaf(2))))
@@ -56,5 +56,5 @@ object Chapter3 {
 //    println(listToString(List(1.0:Double, 2.0:Double, 3.5: Double)))
 //    println(addOne(List(1,2,3)))
 //    println(List.concat(List(List(1,2,3,4),List(5,6,7,8,9))))
-  }
+//  }
 }
