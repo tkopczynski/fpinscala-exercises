@@ -1,3 +1,9 @@
+package chapter4
+
+import chapter3.Cons
+import chapter3.List
+import chapter3.Nil
+
 /**
   * Created by Tomasz Kopczynski.
   */

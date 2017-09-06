@@ -1,3 +1,5 @@
+package chapter3
+
 /**
   * Created by Tomasz Kopczynski.
   */
